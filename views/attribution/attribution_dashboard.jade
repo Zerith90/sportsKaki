@@ -1,0 +1,37 @@
+extends ../layout
+
+block header_addon
+	
+block content
+	.container.fit_100
+		//- .col-md-4
+		//- 	.card.card--big.animated.fadeIn
+		//- 		h3.card_title Total conversion %
+		//- 		p.card__text 
+		//- 		div.card__action-bar
+		//- 			buttin.card__button See more
+		//- .col-md-4
+		//- 	.card.card--big.animated.fadeIn
+		//- 		h3.card_title Total conversion %
+		//- 		p.card__text 
+		//- 		div.card__action-bar
+		//- 			buttin.card__button See more
+		//- .col-md-4
+		//- 	.card.card--small.animated.fadeIn
+		//- 		h2.card__title Click Through Rate
+		//- 		p.card__text 10%
+		.col-md-6
+			.card.card--big.animated.fadeIn#syncCharts
+		.col-md-12
+			.btn-group(role='group', aria-label='...')
+				button.btn.btn-default.overviewCtrlBtns.active(type='button' id="0") Clicks
+				button.btn.btn-default.overviewCtrlBtns(type='button' id="1") CTR
+				button.btn.btn-default.overviewCtrlBtns(type='button' id="2") Impressions
+				button.btn.btn-default.overviewCtrlBtns(type='button' id="3") Conversions
+				button.btn.btn-default.overviewCtrlBtns(type='button' id="4") Revenue
+			.card.card--big.animated.fadeIn#overview
+block footer_addon
+	script(src='http://code.highcharts.com/highcharts.js')
+	script(src="https://code.highcharts.com/modules/drilldown.js")
+	script(src="http://code.highcharts.com/modules/exporting.js")
+	script(src='/js/lib/attribution/main.js')

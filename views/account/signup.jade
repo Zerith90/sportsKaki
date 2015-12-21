@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  .page-header
+    h3 Sign up
+  form.form-horizontal.form-body(id='signup-form', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-3.control-label(for='email') Email
+      .col-sm-7
+        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus)
+    .form-group
+      //- label.col-sm-3.control-label(for='password') Password
+      .col-sm-7.form-group.form-md-line-input.form-md-floating-label.has-success
+        input.form-control.input-sm(type='password', name='password', id='password', placeholder='Password')
+    .form-group.form-md-line-input.form-md-floating-label
+      input#form_control_1.form-control(type='text' required)
+      label(for='form_control_1') Regular input
+      span.help-block Some help goes here...
+    .col-sm-offset-3.col-sm-7
+        button.btn.btn-success(type='submit')
+          i.fa.fa-user-plus
+          | Signup
